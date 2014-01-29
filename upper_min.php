@@ -15,10 +15,6 @@
 	<form action="<?php echo basename($_SERVER['PHP_SELF']);?>?upload=true" method="post" enctype="multipart/form-data">
 		<h2>画像ファイルをアップロード：</h2><br>
 		<input type="file" name="upfile" size="30" /><br>
-		ユーザ名<font size="-1" color="red"> (オプション)*</font>
-		<input type="text" name="username" size="30" /><br>
-		パスワード<font size="-1" color="red"> (オプション)*</font>
-		<input type="text" name="passwd" size="30" /><br>
 		<input type="submit" value="アップロード" />
 	</form>
 	</div>
@@ -29,7 +25,7 @@
 	
 	//ファイルアップロードを捕捉して、画像ファイルを保存する。
 	function capture_uploaded_image(){
-		$up_dir = "imgs/";	//画像ファイルを保存するディレクトリ
+		$up_dir = "uploads/";	//画像ファイルを保存するディレクトリ
 		
 		//アップロードの検出
 		if (!isset($_GET["upload"])){
